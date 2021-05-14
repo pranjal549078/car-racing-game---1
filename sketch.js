@@ -1,12 +1,13 @@
 var canvas, backgroundImage;
 
 var gameState = 0;
+console.log(gameState)
 var playerCount;
-
+console.log(playerCount)
 var database;
 
 var form, player, game;
-
+var allPlayers
 
 function setup(){
   canvas = createCanvas(400,400);
@@ -18,4 +19,16 @@ function setup(){
 
 
 function draw(){
+  if(playerCount === 4 )
+  {
+   game.update(1)
+  }
+  if(gameState === 1)
+  {
+    clear()
+    game.play()
+    
+  }
 }
+
+ 
